@@ -22,9 +22,7 @@ header {
     align-items: center;
     box-shadow: 0 0 25px 0 greenyellow;
 }
-.frog {
-    
-}
+
 header li {
     margin: 20px;
 }
@@ -43,3 +41,44 @@ body {
 header * {
     display: inline;
 }
+
+/* Your existing styles */
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    margin-right: 20px; /* Adjust as needed */
+    position: relative;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 77px;
+}
+
+.default-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve aspect ratio and cover the container */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add smooth transition effect for opacity */
+    pointer-events: none; /* Prevent the overlay from blocking clicks */
+}
+
+.header-image:hover .image-overlay {
+    opacity: 1; /* Make the overlay image visible on hover */
+}
+
+.header-image:hover .default-image {
+    opacity: 0; /* Hide the default image on hover */
+}
+
+/* Your existing styles */
